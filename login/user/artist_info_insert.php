@@ -1,0 +1,19 @@
+<?php
+include('dbconnect.php');
+$firstname=$_POST['fname'];
+$middlename=$_POST['middlename'];
+$lastname=$_POST['lastname'];
+$phone=$_POST['phone'];
+$gender=$_POST['gender'];
+$emailid=$_POST['emailid'];
+$address=$_POST['address'];
+$pincode=$_POST['pincode'];
+$specilization_art=$_POST['specilization_art'];
+$total_experiance=$_POST['total_experiance'];
+$sql="insert into artist_info values(null,'$firstname','$middlename','$lastname','$phone','$gender','$emailid','$address','$pincode','$specilization_art','$total_experiance')";
+mysql_query($sql);
+?>
+<script>
+alert("inserted....");
+document.location="artist_info.php";
+</script>
